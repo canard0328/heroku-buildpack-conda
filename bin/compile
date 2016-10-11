@@ -66,9 +66,6 @@ cp -a $conda_temp/* $conda_build/
 
 echo "-----> Finished compile step"
 
-echo "-----> Try to reducd slug size"
-rm -rf $build/.conda/pkgs/conda-env-*
-
 echo "-----> Create .profile.d"
 mkdir -p $build/.profile.d
 	cat <<-'EOF' > $build/.profile.d/conda.sh
