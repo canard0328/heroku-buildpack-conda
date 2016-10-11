@@ -67,8 +67,7 @@ cp -a $conda_temp/* $conda_build/
 echo "-----> Finished compile step"
 
 echo "-----> Try to reducd slug size"
-conda remove conda==4.2.9
-conda remove conda-env==2.6.0
+rm -rf $build/.conda/pkgs/conda-env-*
 
 echo "-----> Create .profile.d"
 mkdir -p $build/.profile.d
